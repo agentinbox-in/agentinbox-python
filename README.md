@@ -54,7 +54,6 @@ except RateLimitError as e:
 - [API Documentation](https://tempmailai.vercel.app/api/v1/openapi.json)
 - [Node.js SDK](https://github.com/kunalgawade19042002-gif/agenttemp-node)
 - [MCP Server](https://github.com/kunalgawade19042002-gif/agenttemp-mcp)
-- [Dashboard](https://tempmailai.vercel.app/dashboard)
 
 ## License
 
