@@ -4,11 +4,11 @@ setup(
     name="agenttemp",
     version="1.0.0",
     author="AgentTemp",
-    author_email="support@agenttemp.io",
+    author_email="support@agentinbox.in",
     description="Python SDK for the AgentTemp API - temporary email inboxes for agents",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/kunalgawade19042002-gif/agenttemp-python",
+    url="https://github.com/agentinbox-in/agenttemp-python",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -40,8 +40,8 @@ setup(
     },
     keywords="agenttemp tempmail email sdk api temporary email disposable",
     project_urls={
-        "Documentation": "https://github.com/kunalgawade19042002-gif/agenttemp-python#readme",
-        "Source": "https://github.com/kunalgawade19042002-gif/agenttemp-python",
-        "Tracker": "https://github.com/kunalgawade19042002-gif/agenttemp-python/issues",
+        "Documentation": "https://github.com/agentinbox-in/agenttemp-python#readme",
+        "Source": "https://github.com/agentinbox-in/agenttemp-python",
+        "Tracker": "https://github.com/agentinbox-in/agenttemp-python/issues",
     },
 )

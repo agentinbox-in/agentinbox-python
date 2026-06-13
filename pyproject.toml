@@ -39,5 +39,5 @@ dev = [
 
 [project.urls]
 Homepage = "https://agentinbox.in"
-Repository = "https://github.com/AgentTemp-io/agenttemp-python"
+Repository = "https://github.com/agentinbox-in/agenttemp-python"
 Documentation = "https://agentinbox.in/api/v1/openapi.json"
