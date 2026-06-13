@@ -1,6 +1,6 @@
 from typing import Any, Dict, List, Optional
 
-from .client import AgentTempClient
+from .client import AgentInboxClient
 
 
 class Inbox:
@@ -26,7 +26,7 @@ class Inbox:
 class InboxesResource:
     """Inbox operations."""
 
-    def __init__(self, client: AgentTempClient):
+    def __init__(self, client: AgentInboxClient):
         self._client = client
 
     def create(

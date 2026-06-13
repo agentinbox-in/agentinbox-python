@@ -1,6 +1,6 @@
 from typing import Any, Dict, List, Optional
 
-from .client import AgentTempClient
+from .client import AgentInboxClient
 
 
 class Session:
@@ -22,7 +22,7 @@ class Session:
 class SessionsResource:
     """Session operations."""
 
-    def __init__(self, client: AgentTempClient):
+    def __init__(self, client: AgentInboxClient):
         self._client = client
 
     def create(

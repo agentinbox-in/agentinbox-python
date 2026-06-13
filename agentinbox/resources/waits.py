@@ -1,6 +1,6 @@
 from typing import Any, Dict, Optional
 
-from .client import AgentTempClient
+from .client import AgentInboxClient
 
 
 class Wait:
@@ -24,7 +24,7 @@ class Wait:
 class WaitsResource:
     """Wait operations."""
 
-    def __init__(self, client: AgentTempClient):
+    def __init__(self, client: AgentInboxClient):
         self._client = client
 
     def create(

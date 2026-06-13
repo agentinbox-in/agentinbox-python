@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-from .client import AgentTempClient
+from .client import AgentInboxClient
 
 
 class Extraction:
@@ -24,7 +24,7 @@ class Extraction:
 class ExtractionsResource:
     """Extraction operations."""
 
-    def __init__(self, client: AgentTempClient):
+    def __init__(self, client: AgentInboxClient):
         self._client = client
 
     def list(self, inbox_id: str) -> list:
