@@ -38,6 +38,6 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://tempmailai.vercel.app"
+Homepage = "https://agentinbox.in"
 Repository = "https://github.com/kunalgawade19042002-gif/agenttemp-python"
-Documentation = "https://tempmailai.vercel.app/api/v1/openapi.json"
+Documentation = "https://agentinbox.in/api/v1/openapi.json"

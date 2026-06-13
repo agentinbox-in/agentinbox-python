@@ -25,7 +25,7 @@ class AgentTempClient:
     def __init__(
         self,
         api_key: str,
-        base_url: str = "https://tempmailai.vercel.app/api/v1",
+        base_url: str = "https://agentinbox.in/api/v1",
         timeout: int = 30,
         retries: int = 3,
     ):
