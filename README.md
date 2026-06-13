@@ -1,19 +1,19 @@
-# AgentTemp Python SDK
+# AgentInbox Python SDK
 
-Python SDK for the AgentTemp email verification API.
+Python SDK for the AgentInbox email verification API.
 
 ## Installation
 
 ```bash
-pip install agenttemp
+pip install agentinbox
 ```
 
 ## Quick Start
 
 ```python
-from agenttemp import AgentTempClient
+from agentinbox import AgentInboxClient
 
-client = AgentTempClient(api_key="at_live_...")
+client = AgentInboxClient(api_key="at_live_...")
 
 # Create an inbox
 inbox = client.inboxes.create(ttl_seconds=3600, purpose="Signup test")
@@ -39,7 +39,7 @@ print(wait.result.value)  # "123456"
 ## Error Handling
 
 ```python
-from agenttemp.errors import QuotaExceededError, RateLimitError
+from agentinbox.errors import QuotaExceededError, RateLimitError
 
 try:
     client.inboxes.create()

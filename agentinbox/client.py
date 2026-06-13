@@ -5,7 +5,7 @@ from typing import Any, Dict, Optional
 import requests
 
 from .errors import (
-    AgentTempError,
+    AgentInboxError,
     InvalidRequestError,
     NotFoundError,
     QuotaExceededError,
@@ -19,8 +19,8 @@ from .resources.sessions import SessionsResource
 from .resources.waits import WaitsResource
 
 
-class AgentTempClient:
-    """Client for the AgentTemp API."""
+class AgentInboxClient:
+    """Client for the AgentInbox API."""
 
     def __init__(
         self,
@@ -95,7 +95,7 @@ class AgentTempClient:
                     elif code == "invalid_request":
                         raise InvalidRequestError(message)
                     else:
-                        raise AgentTempError(message, code)
+                        raise AgentInboxError(message, code)
 
                 return data
 
@@ -105,7 +105,7 @@ class AgentTempClient:
                     time.sleep(2 ** attempt)  # Exponential backoff
                     continue
 
-        raise AgentTempError(
+        raise AgentInboxError(
             f"Request failed after {self.retries} attempts: {last_error}"
         )
 

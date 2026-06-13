@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="agenttemp",
+    name="agentinbox",
     version="1.0.0",
-    author="AgentTemp",
+    author="AgentInbox",
     author_email="support@agentinbox.in",
-    description="Python SDK for the AgentTemp API - temporary email inboxes for agents",
+    description="Python SDK for the AgentInbox API - temporary email inboxes for agents",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/agentinbox-in/agenttemp-python",
+    url="https://github.com/agentinbox-in/agentinbox-python",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -38,10 +38,10 @@ setup(
             "responses>=0.22.0",
         ],
     },
-    keywords="agenttemp tempmail email sdk api temporary email disposable",
+    keywords="agentinbox tempmail email sdk api temporary email disposable",
     project_urls={
-        "Documentation": "https://github.com/agentinbox-in/agenttemp-python#readme",
-        "Source": "https://github.com/agentinbox-in/agenttemp-python",
-        "Tracker": "https://github.com/agentinbox-in/agenttemp-python/issues",
+        "Documentation": "https://github.com/agentinbox-in/agentinbox-python#readme",
+        "Source": "https://github.com/agentinbox-in/agentinbox-python",
+        "Tracker": "https://github.com/agentinbox-in/agentinbox-python/issues",
     },
 )

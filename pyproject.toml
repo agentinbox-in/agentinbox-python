@@ -3,16 +3,16 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "agenttemp"
+name = "agentinbox"
 version = "0.1.0"
-description = "Python SDK for AgentTemp - Email verification infrastructure for AI agents"
+description = "Python SDK for AgentInbox - Email verification infrastructure for AI agents"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.8"
 authors = [
-    {name = "AgentTemp"}
+    {name = "AgentInbox"}
 ]
-keywords = ["agenttemp", "tempmail", "email", "verification", "ai", "agent"]
+keywords = ["agentinbox", "tempmail", "email", "verification", "ai", "agent"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",

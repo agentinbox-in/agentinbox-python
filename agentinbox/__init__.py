@@ -1,6 +1,6 @@
-from .client import AgentTempClient
+from .client import AgentInboxClient
 from .errors import (
-    AgentTempError,
+    AgentInboxError,
     UnauthorizedError,
     RateLimitError,
     QuotaExceededError,
@@ -10,8 +10,8 @@ from .errors import (
 
 __version__ = "0.1.0"
 __all__ = [
-    "AgentTempClient",
-    "AgentTempError",
+    "AgentInboxClient",
+    "AgentInboxError",
     "UnauthorizedError",
     "RateLimitError",
     "QuotaExceededError",
