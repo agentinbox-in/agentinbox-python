@@ -52,8 +52,8 @@ except RateLimitError as e:
 ## Resources
 
 - [API Documentation](https://agentinbox.in/api/v1/openapi.json)
-- [Node.js SDK](https://github.com/agentinbox-in/agenttemp-node)
-- [MCP Server](https://github.com/agentinbox-in/agenttemp-mcp)
+- [Node.js SDK](https://github.com/agentinbox-in/agentinbox-node)
+- [MCP Server](https://github.com/agentinbox-in/agentinbox-mcp)
 
 ## License
 
