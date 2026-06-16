@@ -1,6 +1,9 @@
-from typing import Any, Dict, Optional
+from __future__ import annotations
 
-from .client import AgentInboxClient
+from typing import Any, Dict, Optional, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from ..client import AgentInboxClient
 
 
 class Wait:

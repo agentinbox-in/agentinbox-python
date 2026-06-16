@@ -1,6 +1,9 @@
-from typing import Any, Dict
+from __future__ import annotations
 
-from .client import AgentInboxClient
+from typing import Any, Dict, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from ..client import AgentInboxClient
 
 
 class Message:
@@ -34,4 +37,4 @@ class MessagesResource:
 
     def extract(self, message_id: str) -> Dict[str, Any]:
         """Extract data from a message."""
-        return self._client.get(f"/messages/{message_id}/extract")
+        return self._client.post(f"/messages/{message_id}/extract")
