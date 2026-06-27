@@ -25,7 +25,7 @@ wait = client.waits.create(
     type="otp",
     timeout_seconds=120
 )
-print(wait.result.value)  # "123456"
+print(wait.result["value"])  # "123456"
 ```
 
 ## Features

@@ -11,14 +11,17 @@ class Wait:
 
     def __init__(self, data: Dict[str, Any]):
         self.id = data.get("id")
-        self.inbox_id = data.get("inbox_id")
+        self.object = data.get("object")
+        self.inbox_id = data.get("inboxId")
+        self.message_id = data.get("messageId")
         self.type = data.get("type")
         self.status = data.get("status")
-        self.timeout_seconds = data.get("timeout_seconds")
-        self.expires_at = data.get("expires_at")
+        self.timeout_seconds = data.get("timeoutSeconds")
+        self.filters = data.get("filters")
+        self.expires_at = data.get("expiresAt")
         self.result = data.get("result")
-        self.created_at = data.get("created_at")
-        self.completed_at = data.get("completed_at")
+        self.created_at = data.get("createdAt")
+        self.completed_at = data.get("completedAt")
 
     def __repr__(self) -> str:
         return f"Wait(id={self.id}, type={self.type}, status={self.status})"
@@ -63,5 +66,5 @@ class WaitsResource:
         return Wait(data)
 
     def list(self, inbox_id: str) -> list:
-        """List waits for an inbox."""
-        return self._client.get(f"/inboxes/{inbox_id}/waits")
+        """List waits for an inbox via session details is not supported by the public API."""
+        raise NotImplementedError("The public API does not expose /inboxes/{id}/waits")

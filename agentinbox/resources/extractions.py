@@ -11,14 +11,16 @@ class Extraction:
 
     def __init__(self, data: Dict[str, Any]):
         self.id = data.get("id")
-        self.message_id = data.get("message_id")
-        self.inbox_id = data.get("inbox_id")
+        self.object = data.get("object")
+        self.message_id = data.get("messageId")
+        self.inbox_id = data.get("inboxId")
         self.type = data.get("type")
         self.value = data.get("value")
         self.url = data.get("url")
         self.confidence = data.get("confidence")
         self.candidates = data.get("candidates", [])
-        self.created_at = data.get("created_at")
+        self.source = data.get("source")
+        self.created_at = data.get("createdAt")
 
     def __repr__(self) -> str:
         return f"Extraction(id={self.id}, type={self.type})"
@@ -32,4 +34,5 @@ class ExtractionsResource:
 
     def list(self, inbox_id: str) -> list:
         """List extractions for an inbox."""
-        return self._client.get(f"/inboxes/{inbox_id}/extractions")
+        data = self._client.get(f"/inboxes/{inbox_id}/extractions")
+        return [Extraction(item) for item in data.get("data", [])]

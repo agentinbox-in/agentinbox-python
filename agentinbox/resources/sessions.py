@@ -11,12 +11,13 @@ class Session:
 
     def __init__(self, data: Dict[str, Any]):
         self.id = data.get("id")
+        self.object = data.get("object")
         self.name = data.get("name")
         self.status = data.get("status")
         self.metadata = data.get("metadata")
-        self.expires_at = data.get("expires_at")
-        self.created_at = data.get("created_at")
-        self.updated_at = data.get("updated_at")
+        self.expires_at = data.get("expiresAt")
+        self.created_at = data.get("createdAt")
+        self.updated_at = data.get("updatedAt")
 
     def __repr__(self) -> str:
         return f"Session(id={self.id}, name={self.name})"

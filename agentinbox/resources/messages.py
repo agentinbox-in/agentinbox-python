@@ -11,14 +11,17 @@ class Message:
 
     def __init__(self, data: Dict[str, Any]):
         self.id = data.get("id")
-        self.inbox_id = data.get("inbox_id")
-        self.from_email = data.get("from_email")
-        self.from_name = data.get("from_name")
+        self.object = data.get("object")
+        self.inbox_id = data.get("inboxId")
+        self.from_email = data.get("fromEmail")
+        self.from_name = data.get("fromName")
+        self.to_email = data.get("toEmail")
         self.subject = data.get("subject")
-        self.text_body = data.get("text_body")
-        self.html_body = data.get("html_body")
-        self.received_at = data.get("received_at")
-        self.created_at = data.get("created_at")
+        self.has_attachments = data.get("hasAttachments")
+        self.size_bytes = data.get("sizeBytes")
+        self.text_body = data.get("textBody")
+        self.html_body = data.get("htmlBody")
+        self.received_at = data.get("receivedAt")
 
     def __repr__(self) -> str:
         return f"Message(id={self.id}, subject={self.subject})"

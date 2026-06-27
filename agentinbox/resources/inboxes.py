@@ -11,16 +11,14 @@ class Inbox:
 
     def __init__(self, data: Dict[str, Any]):
         self.id = data.get("id")
-        self.email_address = data.get("email_address")
-        self.local_part = data.get("local_part")
-        self.domain_id = data.get("domain_id")
-        self.ttl_seconds = data.get("ttl_seconds")
-        self.expires_at = data.get("expires_at")
+        self.object = data.get("object")
+        self.email_address = data.get("emailAddress")
+        self.ttl_seconds = data.get("ttlSeconds")
+        self.expires_at = data.get("expiresAt")
         self.status = data.get("status")
         self.purpose = data.get("purpose")
-        self.created_at = data.get("created_at")
-        self.completed_at = data.get("completed_at")
-        self.session_id = data.get("session_id")
+        self.created_at = data.get("createdAt")
+        self.completed_at = data.get("completedAt")
 
     def __repr__(self) -> str:
         return f"Inbox(id={self.id}, email={self.email_address})"
@@ -66,8 +64,10 @@ class InboxesResource:
 
     def list_messages(self, inbox_id: str) -> List[Dict[str, Any]]:
         """List messages in an inbox."""
-        return self._client.get(f"/inboxes/{inbox_id}/messages")
+        data = self._client.get(f"/inboxes/{inbox_id}/messages")
+        return data.get("data", [])
 
     def list_extractions(self, inbox_id: str) -> List[Dict[str, Any]]:
         """List extractions in an inbox."""
-        return self._client.get(f"/inboxes/{inbox_id}/extractions")
+        data = self._client.get(f"/inboxes/{inbox_id}/extractions")
+        return data.get("data", [])
